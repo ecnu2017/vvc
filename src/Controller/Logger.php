@@ -29,9 +29,9 @@ class Logger
         self::$logger['auth'] = self::$logger['main']->withName('Auth');
         self::$logger['upload'] = self::$logger['main']->withName('Uploader');
 
-        // self::$logger['exception']
-            // = self::$logger['main']->withName('Unhandled');
-        // ErrorHandler::register(self::$logger['exception']);
+        self::$logger['exception']
+            = self::$logger['main']->withName('Unhandled');
+        ErrorHandler::register(self::$logger['exception']);
     }
 
     public static function log(

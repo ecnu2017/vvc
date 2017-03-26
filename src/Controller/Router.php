@@ -489,7 +489,11 @@ class Router
 
                             case 'delete' :
                                 if (!empty($post['pics'])) {
-                                    $controller->deletePictures($post['pics']);
+                                    $controller->deletePictures(
+                                        PIC_DIRECTORY,
+                                        $post['pics'],
+                                        '/admin/uploads/pictures'
+                                    );
                                 } else {
                                     $controller->showUploadsPage();
                                 }
@@ -519,6 +523,46 @@ class Router
                                 }
                         }
                         break;
+
+                    case 'drugs' :
+                        switch ($route['page']) {
+                            case 'delete' :
+                                if (!empty($post['drugPics'])) {
+                                    $controller->deletePictures(
+                                        DRUG_DIRECTORY,
+                                        $post['drugPics'],
+                                        '/admin/uploads/drugs'
+                                    );
+                                } else {
+                                    $controller->showUploadsPage('drugs');
+                                }
+                                break;
+
+                            case 'upload' :
+                                if (!empty($files['drugUploads'])) {
+                                    Uploader::uploadPictures(
+                                        DRUG_DIRECTORY,
+                                        $controller,
+                                        $files['drugUploads'],
+                                        '/admin/uploads/drugs'
+                                    );
+                                } else {
+                                    $controller->showUploadsPage('drugs');
+                                }
+                                break;
+
+                            default :
+                                if (!empty($post['pics_per_page'])) {
+                                    $controller->showUploadsPage(
+                                        $route['action'],
+                                        $post['pics_per_page']
+                                    );
+                                } else {
+                                    $controller->showUploadsPage('drugs');
+                                }
+                        }
+                        break;
+
                 }
                 break;
 

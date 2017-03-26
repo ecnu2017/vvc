@@ -1,4 +1,6 @@
-<form id="drugsForm" action="/admin/uploads" method="post">
+<form id="drugPicsForm" action="/admin/uploads/drugs/upload" method="post" enctype="multipart/form-data" novalidate>
+{% include 'inc/dlg/delete_drug_pics.twig' %}
+<input id="drugPicChooser" style="display:none" type="file" name="drugUploads[]" multiple>
 <div class="row">
     {% for page, pics in drugPics %}
     <div class="drugHidable" id="drugPage{{page}}"
@@ -7,6 +9,7 @@
         <div class="col-md-{{12 / picsPerRow}}">
             <p>{{ pic|name }}</p>
             <span role="button" class="thumbnail"><img src="{{pic}}"></span>
+            <input type="hidden" name="drugPics[]" value="">
         </div>
         {% endfor %}
     </div>
@@ -14,22 +17,28 @@
 </div>
 </form>
 
-<form id="drugPagesForm" action="/admin/uploads/drugs/" method="post">
 <div class="btn-toolbar">
     <div class="btn-group">
+        <form id="drugPagesForm" action="/admin/uploads/drugs/" method="post">
         <button type="submit" name="pics_per_page" value="high" class="btn btn-default {% if picsNum == "high" %}active{% endif %}">
             <span class="glyphicon glyphicon-th"></span>
         </button>
         <button type="submit" name="pics_per_page" value="low" class="btn btn-default {% if picsNum == "low" %}active{% endif %}">
             <span class="glyphicon glyphicon-th-large"></span>
         </button>
+        </form>
     </div>
     <div class="btn-group">
-        {% for page, pics in drugPics %}
-        <a id="drugLink{{page}}" onclick="showDrugPage({{page}})"
-        class="drugLinks btn btn-default
+        {% for page, pics in illPics %}
+        <a id="link{{page}}" onclick="showPage({{page}})"
+        class="links btn btn-default
         {% if page == 1 %}active{% endif %}">{{page}}</a>
         {% endfor %}
     </div>
+    <div class="btn-group pull-right">
+        <input class="btn btn-primary" type="submit"
+            name="uploadDrugPics" value="Upload new">
+        <input class="btn btn-danger" type="submit" style="margin-left:5px"
+            name="deleteDrugPics" value="Delete selected">
+    </div>
 </div>
-</form>
