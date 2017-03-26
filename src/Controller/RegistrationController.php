@@ -60,8 +60,8 @@ class RegistrationController extends BaseController
 
             $this->flash('success', 'Registration complete');
             $authToken = Auth::encodeToken($user->getId(), $user->getRoleId());
-            return Router::redirect('/', $authToken);
-
+            Router::redirect('/', $authToken);
+            
         } catch (\Exception $e) {
             Logger::log('db', 'error', 'Failed to register new user', $e);
             $this->flash('fail', 'Registration failed, please try again');

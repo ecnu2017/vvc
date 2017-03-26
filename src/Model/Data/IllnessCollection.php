@@ -68,6 +68,7 @@ class IllnessCollection
 
     public function getJustIllnesses() : array
     {
+        // TODO sorting.
         return $this->justIllnesses;
     }
 

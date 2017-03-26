@@ -17,8 +17,8 @@ DROP TABLE IF EXISTS `drug`;
 CREATE TABLE `drug` (
   `drug_id` int(11) NOT NULL AUTO_INCREMENT,
   `drug_name` varchar(12) DEFAULT NULL,
-  `drug_text` varchar(200) DEFAULT NULL,
-  `drug_picture` varchar(200) DEFAULT NULL,
+  `drug_text` text DEFAULT NULL,
+  `drug_picture` varchar(40) DEFAULT NULL,
   `drug_cost` float DEFAULT NULL,
   PRIMARY KEY (`drug_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -58,8 +58,8 @@ DROP TABLE IF EXISTS `illpic`;
 CREATE TABLE `illpic` (
   `ill_id` int(11) NOT NULL,
   `step_num` int(11) NOT NULL,
-  `pic_path` text,
-  PRIMARY KEY (`ill_id`,`step_num`)
+  `pic_path` varchar(50) NOT NULL,
+  PRIMARY KEY (`ill_id`,`step_num`, `pic_path`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `illpic` */
@@ -71,7 +71,8 @@ DROP TABLE IF EXISTS `illvid`;
 CREATE TABLE `illvid` (
   `ill_id` int(11) DEFAULT NULL,
   `step_num` int(11) DEFAULT NULL,
-  `vid_path` text
+  `vid_path` varchar(150) NOT NULL,
+  PRIMARY KEY (`ill_id`,`step_num`, `vid_path`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `illvid` */
@@ -127,7 +128,7 @@ DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_name` varchar(12) DEFAULT NULL,
+  `user_name` varchar(20) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
   `role_id` int(11) DEFAULT NULL,
   `createdAt` datetime DEFAULT CURRENT_TIMESTAMP,

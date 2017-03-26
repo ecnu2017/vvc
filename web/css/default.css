@@ -6,3 +6,11 @@
 .outline {
     outline: 3px solid #2c3e50;
 }
+
+table a:not(.btn), .table a:not(.btn) {
+    text-decoration: none;
+}
+
+table a:not(.btn), .table a:not(.btn):hover {
+    text-decoration: underline;
+}
