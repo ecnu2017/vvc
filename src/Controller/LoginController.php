@@ -58,6 +58,11 @@ class LoginController extends BaseController
 
         $this->flash('success', "Welcome back, $username");
         $authToken = Auth::encodeToken($user->getId(), $user->getRoleId());
-        return Router::redirect('/', $authToken);
+
+        if ($user->getRoleId() == 1) {
+            Router::redirect('/admin', $authToken);
+        } else {
+            Router::redirect('/', $authToken);
+        }
     }
 }
