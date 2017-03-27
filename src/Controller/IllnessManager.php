@@ -142,8 +142,6 @@ class IllnessManager extends AdminController
                 $drug['picture'] = DRUG_DIRECTORY . $drug['picture'];
             }
             $drugs = $ill['drugs'];
-
-            $stay = $ill['stay'];
             $payments = $ill['payments'];
 
             $duplicate = $dbReader->findIllnessByName($name);
@@ -159,7 +157,6 @@ class IllnessManager extends AdminController
                 $description,
                 $steps,
                 $drugs,
-                // $stay,
                 $payments
             );
 

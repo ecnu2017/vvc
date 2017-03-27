@@ -45,8 +45,6 @@
             text    : "Used for..."
             picture : jkl.jpg
             cost    : 50
-    stay :
-        days        : 3
     payments :
         -
             name    : "Payment for drug 1"
@@ -104,8 +102,6 @@
             text    : "Used for..."
             picture : jkl.jpg
             cost    : 50
-    stay :
-        days        : 3
     payments :
         -
             name    : "Payment for drug 1"
