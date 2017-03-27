@@ -3,7 +3,8 @@ namespace VVC\Model\Data;
 
 class Collection
 {
-    // public function searchBy($token, )
-
-
+    protected function sortByName($first, $second)
+    {
+        return strnatcmp($first->getName(), $second->getName());
+    }
 }

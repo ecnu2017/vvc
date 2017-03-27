@@ -1,6 +1,6 @@
 $(".thumbnail").click(function() {
     var $selected = $(this);
-    var $name = $selected.siblings('p').text();
+    var $name = $selected.siblings('div').children('#picName').text();
     var $input = $selected.siblings('input');
     var $id = $selected.parents('.hidable').attr('id');
 

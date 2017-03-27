@@ -551,7 +551,8 @@ class Reader extends Connection
 
         $sql = "SELECT id.ill_id,i.ill_name,i.class_name,i.ill_describe
         		    FROM illness i INNER JOIN illdrug id
-                ON id.drug_id=? AND i.ill_id=id.ill_id ";
+                ON id.drug_id=? AND i.ill_id=id.ill_id
+                ORDER BY i.ill_name";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$drugId]);
 
@@ -582,7 +583,8 @@ class Reader extends Connection
 
         $sql = "SELECT i.ill_id,i.ill_name,i.class_name,i.ill_describe
         		    FROM illness i INNER JOIN payments p
-                 ON p.pay_id=? AND i.ill_id=p.ill_id ";
+                 ON p.pay_id=? AND i.ill_id=p.ill_id
+                 ORDER BY i.ill_name";
         $stmt = $this->db->prepare($sql);
         $stmt->execute([$paymentId]);
 
@@ -731,7 +733,7 @@ class Reader extends Connection
 
     public function getAllSteps()
     {
-        $sql = "SELECT * FROM stepname";
+        $sql = "SELECT * FROM stepname ORDER BY step_name";
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
 
@@ -746,6 +748,49 @@ class Reader extends Connection
         return $steps;
     }
 
+    public function findIllnessesByPicture(string $path)
+    {
+        $sql = "SELECT i.ill_id,i.ill_name,i.class_name,i.ill_describe
+                FROM illness i INNER JOIN illpic p
+                ON p.ill_id = i.ill_id AND p.pic_path = ?
+                GROUP BY i.ill_id
+                ORDER BY i.ill_name";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$path]);
+
+        $illnesses = [];
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
+        	$illnesses[] = new IllnessRecord(
+                $row['ill_id'],
+    			$row['ill_name'],
+    			$row['class_name'],
+                $row['ill_describe']
+        	);
+        }
+
+        return $illnesses;
+    }
+
+    public function findDrugByPicture(string $path)
+    {
+        $sql = "SELECT * FROM drug WHERE drug_picture = ?
+                ORDER BY drug_name";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute([$path]);
+        $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+        if (!$result) {
+            return false;
+        }
+
+        return new Drug(
+            $result['drug_id'],
+            $result['drug_name'],
+            $result['drug_text'],
+            $result['drug_picture'],
+            $result['drug_cost']
+        );
+    }
 
     public function findUserByUsername_stub($username)
     {

@@ -8,7 +8,16 @@
     {% if page > 1 %}hidden{% endif %}>
         {% for pic in pics %}
         <div class="col-md-{{12 / picsPerRow}}">
-            <p>{{ pic|name }}</p>
+            <div style="padding-bottom:10px;">
+                <span id="picName">{{ pic|name }}</span>
+                {% if attribute(assocIlls, pic) is not empty %}
+                <span role="button" class="glyphicon glyphicon-question-sign pop-toggle">
+                    <div data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"
+                    data-content="{% include 'inc/ill_ref.twig' %}">
+                    </div>
+                </span>
+                {% endif %}
+            </div>
             <span role="button" class="thumbnail"><img src="{{pic}}"></span>
             <input type="hidden" name="pics[]" value="">
         </div>
