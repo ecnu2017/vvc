@@ -64,7 +64,7 @@ class Uploader
         $ext = $tmp->getClientOriginalExtension();
         $mime = $tmp->getMimeType();
 
-        if (!(in_array($mime, ['image/png', 'image/jpg'])) ||
+        if (!(in_array($mime, ['image/png', 'image/jpeg'])) ||
             !(in_array($ext, ['png', 'jpg'])))
         {
             $controller->flash('fail',

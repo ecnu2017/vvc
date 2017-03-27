@@ -4,24 +4,28 @@
     <td>{{ drug.text }}</td>
     <td>
         {{ drug.picture|name }}
+        {% if drug.picture is not empty %}
         <span role="button" class="glyphicon glyphicon-question-sign pop-toggle">
             <div data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"
             data-content="
             {% if drug.picture %}
-                <img src='{{drug.picture}}'>
+                <img class='img-responsive' src='{{drug.picture}}'>
             {% endif %}
             ">
             </div>
         </span>
+        {% endif %}
     </td>
     <td>{{ drug.cost }}</td>
     <td>
         {{ attribute(ills, drug.id)|length }}
+        {% if attribute(ills, drug.id) is not empty %}
         <span role="button" class="glyphicon glyphicon-question-sign pop-toggle">
             <div data-container="body" data-toggle="popover" data-placement="bottom" data-html="true"
             data-content="{% include 'inc/ill_ref.twig' %}">
-            <div>
+            </div>
         </span>
+        {% endif %}
     </td>
     <td class="col-sm-1">
         <a class="btn btn-sm btn-primary" role="button"

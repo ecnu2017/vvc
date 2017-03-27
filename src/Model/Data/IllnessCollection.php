@@ -20,7 +20,7 @@ namespace VVC\Model\Data;
  *                               - class 2
  *                               - description 3
  */
-class IllnessCollection
+class IllnessCollection extends Collection
 {
     private $records = [];          // organized as above
     private $justIllnesses = [];    // not organized
@@ -68,7 +68,7 @@ class IllnessCollection
 
     public function getJustIllnesses() : array
     {
-        // TODO sorting.
+        usort($this->justIllnesses, [$this, 'sortByName']);
         return $this->justIllnesses;
     }
 
