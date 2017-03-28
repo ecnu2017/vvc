@@ -98,8 +98,14 @@ class Router
                 Auth::requireAuth();
                 $controller = new CatalogController();
 
-                if (is_numeric($route['page'])) {
-                    $controller->showIllnessPage($route['page']);
+                if (!empty($route['section'])) {
+                    if (empty($get) && is_numeric($route['page'])) {
+                        $controller->showIllnessPage($route['page']);
+                    } else {
+                        $controller->showClassPage(
+                            urldecode($route['section']), $get['page']
+                        );
+                    }
                 } else {
                     $controller->showCatalogPage();
                 }

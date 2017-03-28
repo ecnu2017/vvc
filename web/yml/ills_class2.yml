@@ -1,0 +1,711 @@
+########################
+####### Class 2 ########
+########################
+
+####### Illness A ########
+-
+    name        : "Illness A"
+    class       : "Class 2"
+    description : "Here goes Illness A description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness B ########
+-
+    name        : "Illness B"
+    class       : "Class 2"
+    description : "Here goes Illness B description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : "Payment for stay"
+            cost    : 40
+            number  : 3
+
+####### Illness C ########
+-
+    name        : "Illness C"
+    class       : "Class 2"
+    description : "Here goes Illness C description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness D ########
+-
+    name        : "Illness D"
+    class       : "Class 2"
+    description : "Here goes Illness D description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness E ########
+-
+    name        : "Illness E"
+    class       : "Class 2"
+    description : "Here goes Illness E description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness F ########
+-
+    name        : "Illness F"
+    class       : "Class 2"
+    description : "Here goes Illness F description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness G ########
+-
+    name        : "Illness G"
+    class       : "Class 2"
+    description : "Here goes Illness G description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness H ########
+-
+    name        : "Illness H"
+    class       : "Class 2"
+    description : "Here goes Illness H description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness I ########
+-
+    name        : "Illness I"
+    class       : "Class 2"
+    description : "Here goes Illness I description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness J ########
+-
+    name        : "Illness J"
+    class       : "Class 2"
+    description : "Here goes Illness J description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness K ########
+-
+    name        : "Illness K"
+    class       : "Class 2"
+    description : "Here goes Illness K description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3
+
+####### Illness L ########
+-
+    name        : "Illness L"
+    class       : "Class 2"
+    description : "Here goes Illness L description."
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "AB-01"
+            text    : "Used for..."
+            picture : drug.jpg
+            cost    : 30
+        -
+            name    : "BC-02"
+            text    : "Used for..."
+            picture : jkl.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3

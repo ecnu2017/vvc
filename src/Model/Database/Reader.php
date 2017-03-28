@@ -151,6 +151,31 @@ class Reader extends Connection
         return $collection;
     }
 
+    public function getIllnessesByClass(
+        string $class, $limit = null, $offset = null
+    ) {
+        $sql = "SELECT * FROM illness WHERE class_name = ?
+                LIMIT ? OFFSET ?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, $class);
+        $stmt->bindValue(2, $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(3, $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        $illnesses = [];
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
+            $illnesses[] = new IllnessRecord(
+                 $row['ill_id'],
+                 $row['ill_name'],
+                 $row['class_name'],
+                 $row['ill_describe']
+            );
+        }
+
+        return $illnesses;
+    }
+
     /**
      * Returns array with all drugs, full details
      * @return array of Drugs, empty or not

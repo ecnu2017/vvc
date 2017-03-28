@@ -17,7 +17,7 @@ const TEMPLATES_DIR = __DIR__ . '/../View/templates';
 class BaseController
 {
     protected $twig;
-    protected $template = 'home.twig';
+    protected $template = 'frontend/home-navi.twig';
     protected $httpCode = Response::HTTP_FOUND;
     protected $vars = [];
 
