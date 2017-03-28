@@ -1,14 +1,12 @@
-[2017-03-28 13:01:02] Unhandled ERROR > Uncaught Exception ParseError: "syntax error, unexpected '$stmt' (T_VARIABLE)" at D:\xampp\htdocs\vvc\src\Model\Database\Reader.php line 163
+[2017-03-28 14:25:01] Database ERROR > Failed to get all illnesses
+msg:  SQLSTATE[08S01]: Communication link failure: 1184 Aborted connection 4 to db: 'vvc' user: 'vvc_admin' host: 'localhost' (init_connect command failed)
+loc:  src\Model\Database\Reader.php [line 138]
 
-[2017-03-28 13:02:41] Unhandled ERROR > Uncaught Exception ParseError: "syntax error, unexpected ')'" at D:\xampp\htdocs\vvc\src\Model\Database\Reader.php line 180
+[2017-03-28 14:25:03] Database ERROR > Failed to get all illnesses
+msg:  SQLSTATE[08S01]: Communication link failure: 1184 Aborted connection 5 to db: 'vvc' user: 'vvc_admin' host: 'localhost' (init_connect command failed)
+loc:  src\Model\Database\Reader.php [line 138]
 
-[2017-03-28 13:02:46] Unhandled ERROR > Uncaught Exception ParseError: "syntax error, unexpected ')'" at D:\xampp\htdocs\vvc\src\Model\Database\Reader.php line 180
-
-[2017-03-28 13:03:03] Database ERROR > Failed to get all illnesses
-msg:  SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
-loc:  src\Model\Database\Reader.php [line 170]
-
-[2017-03-28 13:03:06] Database ERROR > Failed to get all illnesses
-msg:  SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
-loc:  src\Model\Database\Reader.php [line 170]
+[2017-03-28 14:40:14] Database ERROR > Failed to get all illnesses
+msg:  SQLSTATE[08S01]: Communication link failure: 1184 Aborted connection 3 to db: 'vvc' user: 'vvc_admin' host: 'localhost' (init_connect command failed)
+loc:  src\Model\Database\Reader.php [line 138]
 

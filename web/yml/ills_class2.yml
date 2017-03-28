@@ -2,11 +2,11 @@
 ####### Class 2 ########
 ########################
 
-####### Illness A ########
+####### Illness AA ########
 -
-    name        : "Illness A"
+    name        : "Illness AA"
     class       : "Class 2"
-    description : "Here goes Illness A description."
+    description : "Here goes Illness AA description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -61,11 +61,11 @@
             cost    : 40
             number  : 3
 
-####### Illness B ########
+####### Illness BB ########
 -
-    name        : "Illness B"
+    name        : "Illness BB"
     class       : "Class 2"
-    description : "Here goes Illness B description."
+    description : "Here goes Illness BB description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -120,11 +120,11 @@
             cost    : 40
             number  : 3
 
-####### Illness C ########
+####### Illness CC ########
 -
-    name        : "Illness C"
+    name        : "Illness CC"
     class       : "Class 2"
-    description : "Here goes Illness C description."
+    description : "Here goes Illness CC description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -179,11 +179,11 @@
             cost    : 40
             number  : 3
 
-####### Illness D ########
+####### Illness DD ########
 -
-    name        : "Illness D"
+    name        : "Illness DD"
     class       : "Class 2"
-    description : "Here goes Illness D description."
+    description : "Here goes Illness DD description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -238,11 +238,11 @@
             cost    : 40
             number  : 3
 
-####### Illness E ########
+####### Illness EE ########
 -
-    name        : "Illness E"
+    name        : "Illness EE"
     class       : "Class 2"
-    description : "Here goes Illness E description."
+    description : "Here goes Illness EE description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -297,11 +297,11 @@
             cost    : 40
             number  : 3
 
-####### Illness F ########
+####### Illness FF ########
 -
-    name        : "Illness F"
+    name        : "Illness FF"
     class       : "Class 2"
-    description : "Here goes Illness F description."
+    description : "Here goes Illness FF description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -356,11 +356,11 @@
             cost    : 40
             number  : 3
 
-####### Illness G ########
+####### Illness GG ########
 -
-    name        : "Illness G"
+    name        : "Illness GG"
     class       : "Class 2"
-    description : "Here goes Illness G description."
+    description : "Here goes Illness GG description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -415,11 +415,11 @@
             cost    : 40
             number  : 3
 
-####### Illness H ########
+####### Illness HH ########
 -
-    name        : "Illness H"
+    name        : "Illness HH"
     class       : "Class 2"
-    description : "Here goes Illness H description."
+    description : "Here goes Illness HH description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -474,11 +474,11 @@
             cost    : 40
             number  : 3
 
-####### Illness I ########
+####### Illness II ########
 -
-    name        : "Illness I"
+    name        : "Illness II"
     class       : "Class 2"
-    description : "Here goes Illness I description."
+    description : "Here goes Illness II description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -533,11 +533,11 @@
             cost    : 40
             number  : 3
 
-####### Illness J ########
+####### Illness JJ ########
 -
-    name        : "Illness J"
+    name        : "Illness JJ"
     class       : "Class 2"
-    description : "Here goes Illness J description."
+    description : "Here goes Illness JJ description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -592,11 +592,11 @@
             cost    : 40
             number  : 3
 
-####### Illness K ########
+####### Illness KK ########
 -
-    name        : "Illness K"
+    name        : "Illness KK"
     class       : "Class 2"
-    description : "Here goes Illness K description."
+    description : "Here goes Illness KK description."
     steps :
         1 :
             text     : "Step 1 text"
@@ -651,11 +651,11 @@
             cost    : 40
             number  : 3
 
-####### Illness L ########
+####### Illness LL ########
 -
-    name        : "Illness L"
+    name        : "Illness LL"
     class       : "Class 2"
-    description : "Here goes Illness L description."
+    description : "Here goes Illness LL description."
     steps :
         1 :
             text     : "Step 1 text"
