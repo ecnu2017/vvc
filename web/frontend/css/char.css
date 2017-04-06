@@ -37,8 +37,8 @@ body {
   font-size: 24px;
   color: #300;
   position: absolute;
-  top: 40px;
-  right: 250px;
+  top: 110px;
+  right: 70px;
 }
 
 .select-bar {
@@ -67,7 +67,7 @@ body {
 .operations {
   font-size: 36px;
   width: 900px;
-  height: 400px;
+  height: 500px;
   border-radius: 10px;
   display: inline-block;
   margin-right: 100px;

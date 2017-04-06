@@ -3,9 +3,16 @@
   font-family: 'Helvetica';
 }
 
+body {
+    background-image: url('../img/index.jpg');
+}
+
+#message {
+    max-width: 300px;
+}
+
 #box {
-  background-image: url('../img/index.jpg');
-  padding: 50px 25px 0 50px;
+  padding: 0 25px 0 50px;
   height: 850px;
 }
 
@@ -50,7 +57,7 @@
 
 .login-input {
   height: 40px;
-  width: 250px;
+  width: 220px;
   font-size: 18px;
 }
 

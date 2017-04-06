@@ -1,6 +1,8 @@
 let character
 
 let login = () => {
+  document.getElementById("form").submit();
+  /*
   let username = document.getElementById('username').value
   let password = document.getElementById('password').value
   let captcha = document.getElementById('captcha').value
@@ -30,6 +32,7 @@ let login = () => {
     return
   }
   window.location.href = './navi-guest.html'
+  */
 }
 
 let logout = () => {

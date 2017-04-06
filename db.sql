@@ -104,6 +104,7 @@ CREATE TABLE `stepname` (
 
 /*Data for the table `stepname` */
 
+set names utf8;
 INSERT INTO stepname values (1, '接诊');
 INSERT INTO stepname values (2, '检查');
 INSERT INTO stepname values (3, '诊断');
