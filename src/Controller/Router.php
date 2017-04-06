@@ -37,6 +37,7 @@ class Router
         switch ($route['base']) {
             case '' :
 
+                Auth::requireAuth();
                 $controller = new BaseController();
                 $controller->showHomepage();
                 break;
@@ -97,6 +98,14 @@ class Router
 
                 Auth::requireAuth();
                 $controller = new CatalogController();
+
+                if (!empty($get['q']) && $route['section'] == 'search') {
+                    if (!empty($get['page'])) {
+                        $controller->showSearchPage($get['q'], $get['page']);
+                    } else {
+                        $controller->showSearchPage($get['q'], 1);
+                    }
+                }
 
                 if (!empty($route['section'])) {
                     if (empty($get) && is_numeric($route['page'])) {

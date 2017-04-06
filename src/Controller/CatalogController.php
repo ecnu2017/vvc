@@ -74,4 +74,33 @@ class CatalogController extends BaseController
         $this->addTwigVar('ill', $illness);
         $this->render();
     }
+
+    public function showSearchPage(string $search, int $page)
+    {
+        $offset = ($page - 1) * ILLS_PER_PAGE;
+        $limit = ILLS_PER_PAGE;
+
+        try {
+            $dbReader = new Reader();
+            $illnesses = $dbReader->searchIllnesses($search, $limit, $offset);
+
+            $count = count($illnesses);
+            foreach ($illnesses as $ill) {
+                $count++;
+            }
+            $totalPages = $count / ILLS_PER_PAGE;
+
+        } catch (\Exception $e ) {
+            Logger::log('db', 'error', 'Failed to search illnesses', $e);
+            $this->flash('fail', 'Database operation failed');
+            Router::redirect('/catalog');
+        }
+
+        $this->addTwigVar('search', $search);
+        $this->addTwigVar('ills', $illnesses);
+        $this->addTwigVar('page', $page);
+        $this->addTwigVar('totalPages', $totalPages);
+        $this->setTemplate('frontend/search_results.twig');
+        $this->render();
+    }
 }

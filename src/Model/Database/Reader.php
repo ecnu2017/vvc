@@ -797,6 +797,31 @@ class Reader extends Connection
         return $illnesses;
     }
 
+    public function searchIllnesses(
+        string $search, $limit = null, $offset = null
+    ) {
+        $sql = "SELECT * FROM illness WHERE ill_name LIKE ?
+                LIMIT ? OFFSET ?";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(1, '%' . $search . '%');
+        $stmt->bindValue(2, $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(3, $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        $illnesses = [];
+
+        while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)){
+            $illnesses[] = new IllnessRecord(
+                 $row['ill_id'],
+                 $row['ill_name'],
+                 $row['class_name'],
+                 $row['ill_describe']
+            );
+        }
+
+        return $illnesses;
+    }
+
     public function findDrugByPicture(string $path)
     {
         $sql = "SELECT * FROM drug WHERE drug_picture = ?

@@ -17,7 +17,7 @@ const NO_DATABASE = false;
  *  1 - admin privileges on all pages
  *  2 - signed in user privileges on all pages
  */
-const ACCESS_RIGHTS = 1;
+const ACCESS_RIGHTS = -1;
 
 /**
  * Default user and admin login details

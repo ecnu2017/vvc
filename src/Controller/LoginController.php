@@ -8,7 +8,7 @@ use VVC\Model\Database\Reader;
  */
 class LoginController extends BaseController
 {
-    protected $template = 'login.twig';
+    protected $template = 'frontend/login.twig';
 
     public function showLoginPage()
     {
