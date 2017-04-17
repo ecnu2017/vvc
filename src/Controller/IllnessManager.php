@@ -56,6 +56,9 @@ class IllnessManager extends AdminController
 
     public function showAddIllnessPage()
     {
+        $pics = Uploader::getFiles(PIC_DIRECTORY, ['png', 'jpg']);
+        $this->addTwigVar('pics', $pics);
+
         $this->setTemplate('add_illness.twig');
         $this->render();
     }

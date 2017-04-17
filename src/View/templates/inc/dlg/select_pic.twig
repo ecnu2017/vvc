@@ -10,6 +10,7 @@
         <div class="col-md-2">
             <p>{{ pic|name }}</p>
             <span role="button" class="thumbnail"><img src="{{pic}}"></span>
+            <input type="hidden" name="pics[]" value="">
         </div>
     {% endfor %}
 </div>

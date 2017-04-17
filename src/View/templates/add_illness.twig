@@ -3,7 +3,7 @@
 {% block title %}Add Illness{% endblock %}
 
 {% block scripts %}
-<script src="/js/file_select.js"></script>
+<script src="/js/file_multi_select.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -30,6 +30,7 @@
                 <label for="text">Text</label>
                 <input id="text" type="text" class="form-control" name="text" placeholder="Illness description" required>
             </div>
+            {% include 'inc/add_illness_step.twig' %}
             <br>
             <br>
             <br>
