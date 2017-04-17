@@ -318,9 +318,10 @@ class Router
 
                     case 'add-single' :
                         if (empty($post)) {
-                          $controller->showAddIllnessPage();
+                            $controller->showAddIllnessPage();
                         } else {
-                          $controller->addIllness($post);
+                            self::checkUploads($post, $files, $controller);
+                            $controller->addIllness($post);
                         }
                         break;
 
@@ -583,6 +584,25 @@ class Router
 
             default :
                 self::redirect('/admin');
+        }
+    }
+
+    public static function checkUploads(&$post, $files, $controller)
+    {
+        for ($i = 1; $i <= 4; $i++) {
+            if (!empty($files["uploads_$i"])) {
+                foreach ($files["uploads_$i"] as $upload) {
+                    if (!empty($upload)) {
+                        $pic = Uploader::uploadPicture(
+                            PIC_DIRECTORY,
+                            $controller,
+                            $upload,
+                            '/admin/illnesses/add-single'
+                        );
+                        $post["pics_$i"][] = $pic;
+                    }
+                }
+            }
         }
     }
 }

@@ -1,72 +1,74 @@
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  {% for stepnum, stepname in steps %}
+  {% include 'inc/dlg/step_modal.twig' %}
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
+    <div class="panel-heading" role="tab" id="heading_{{stepnum}}">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          接诊
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_{{stepnum}}" aria-expanded="true" aria-controls="collapse_{{stepnum}}">
+          {{ stepname }}
         </a>
       </h4>
     </div>
-    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+    <div id="collapse_{{stepnum}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_{{stepnum}}">
       <div class="panel-body">
           <div class="form-group">
               <label>Text</label>
-              <input type="text" class="form-control" name="text[]" placeholder="Step instructions" required>
+              <input type="text" class="form-control" name="text_{{stepnum}}" placeholder="Instructions">
           </div>
           <div class="form-group">
               <label>Pictures</label><br>
-              <input id="pictures" type="text" class="form-control" name="pictures" placeholder="No pictures selected" readonly>
-
-              <button type="button" class="btn btn-primary col-md-5" data-toggle="modal" data-target="#select_pic">
+              <input id="pictures_{{stepnum}}" type="text" class="form-control" name="pictures_{{stepnum}}" placeholder="No pictures selected" readonly>
+              <button type="button" class="btn btn-primary col-md-5" data-toggle="modal" data-target="#select_pic_{{stepnum}}">
                   Select from existing
               </button>
               <div class="col-md-2"></div>
               <label class="btn btn-primary btn-file col-md-5">
-                  Upload new <input id="uploads" type="file" style="" name="uploads[]" multiple>
+                  Upload new <input id="uploads_{{stepnum}}" type="file" style="display:none" name="uploads_{{stepnum}}[]" multiple>
               </label>
+              <br>
+              <br>
+              <br>
+              <label>Video</label><br>
+              <input type="text" class="form-control" name="video_{{stepnum}}" placeholder="Video">
           </div>
       </div>
     </div>
   </div>
+  {% endfor %}
+
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
+    <div class="panel-heading" role="tab" id="heading_drugs">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          检查
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_drugs" aria-expanded="true" aria-controls="collapse_drugs">
+          Drugs
         </a>
       </h4>
     </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="panel-body">
-        step 2
+    <div id="collapse_drugs" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_drugs">
+      <div id="drugsDiv" class="panel-body">
+          <div class="form-group">
+              <select id="drug" class="form-control" multiple size="10" name="drugs[]">
+                  <option disabled selected value="">Select new drug</option>
+                  {% for drug in drugs %}
+                      <option value="{{drug.name}}">{{ drug.name }}</option>
+                  {% endfor %}
+              </select>
+          </div>
       </div>
     </div>
   </div>
+
   <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
+    <div class="panel-heading" role="tab" id="heading_pay">
       <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          诊断
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_pay" aria-expanded="true" aria-controls="collapse_pay">
+          Payments
         </a>
       </h4>
     </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="panel-body">
-        step 3
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="heading4">
-      <h4 class="panel-title">
-        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
-          治疗方案
-        </a>
-      </h4>
-    </div>
-    <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
-      <div class="panel-body">
-        step 4
+    <div id="collapse_pay" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading_pay">
+      <div id="paymentsDiv" class="panel-body">
+          <a role="button" id="appendPayment" class="btn btn-default">+</a>
       </div>
     </div>
   </div>

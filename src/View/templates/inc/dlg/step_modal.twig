@@ -1,21 +1,23 @@
 {% extends 'inc/dlg/modal_base.twig' %}
 
-{% block modal_id %}select_pic{% endblock %}
+{% block modal_id %}select_pic_{{stepnum}}{% endblock %}
 {% block modal_size %}modal-lg{% endblock %}
-{% block modal_title %}Select Picture{% endblock %}
+{% block modal_title %}Select Pictures for {{stepname}}{% endblock %}
 
 {% block modal_body %}
 <div class="row">
     <div class="row picture-flex" style="padding:10px">
     {% for pic in pics %}
         <div class="col-md-2">
-            <p>{{pic|name}}</p>
-            <div role="button" class="thumbnail"><img class="img-responsive" src="{{pic}}"></div>
+            <p>{{ pic|name }}</p>
+            <span role="button" class="thumbnail"><img src="{{pic}}"></span>
+            <input type="hidden" name="pics_{{stepnum}}[]" value="">
         </div>
     {% endfor %}
     </div>
 </div>
 {% endblock %}
 
+{% block yes_id %}confirm_button_{{stepnum}}{% endblock %}
 {% block yes_color %}primary{% endblock %}
 {% block yes_text %}Confirm{% endblock %}

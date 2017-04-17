@@ -14,3 +14,16 @@ table a:not(.btn), .table a:not(.btn) {
 table a:not(.btn), .table a:not(.btn):hover {
     text-decoration: underline;
 }
+
+.picture-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.picture-flex > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}

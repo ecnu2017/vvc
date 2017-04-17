@@ -39,6 +39,9 @@ const PIC_DIRECTORY  = '/uploads/img/';
 const DRUG_DIRECTORY = '/uploads/img/drugs/';   // drug pictures
 const VID_DIRECTORY  = '/uploads/vid/';
 
+// Chinese characters pattern for regular expression
+const PATTERN_CHINESE = "/[\p{Han}]/simu";
+
 // Debug global helper-shortcuts
 // print $obj
 function p($obj)

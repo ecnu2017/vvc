@@ -3,7 +3,7 @@
 <input id="drugPicChooser" style="display:none" type="file" name="drugUploads[]" multiple>
 <div class="row">
     {% for page, pics in drugPics %}
-    <div class="drugHidable" id="drugPage{{page}}"
+    <div class="drugHidable picture-flex" id="drugPage{{page}}"
     {% if page > 1 %}hidden{% endif %}>
         {% for pic in pics %}
         <div class="col-md-{{12 / picsPerRow}}">
