@@ -56,6 +56,26 @@ class IllnessManager extends AdminController
 
     public function showAddIllnessPage()
     {
+        $pics = Uploader::getFiles(PIC_DIRECTORY, ['png', 'jpg']);
+        $this->addTwigVar('pics', $pics);
+
+        try {
+            $dbReader = new Reader();
+            $drugs = $dbReader->getAllDrugs();
+            $defaultSteps = $dbReader->getAllSteps();
+            $steps = [];
+            foreach ($defaultSteps as $step) {
+                $steps[$step->getNum()] = $step->getName();
+                ksort($steps);
+            }
+        } catch (\Exception $e) {
+            Logger::log('db', 'error', 'Failed to get all drugs', $e);
+            $this->flash('fail', 'Database operation failed');
+            $this->showIllnessListPage();
+        }
+
+        $this->addTwigVar('drugs', $drugs);
+        $this->addTwigVar('steps', $steps);
         $this->setTemplate('add_illness.twig');
         $this->render();
     }
@@ -69,7 +89,45 @@ class IllnessManager extends AdminController
 
         $name = $post['name'];
         $class = $post['class'];
-        $text = $post['text'];
+        $description = $post['description'];
+
+        $steps = [];
+        for ($i = 1; $i <= 4; $i++) {
+            $stepText = $post["text_$i"] ?? '';
+            $stepPics = [];
+            foreach ($post["pics_$i"] as $pic) {
+                if (!empty($pic)) {
+                    $stepPics[] = PIC_DIRECTORY . $pic;
+                }
+            }
+            $stepVids = [];
+            if (!empty($post["video_$i"])) {
+                $stepVids[] = VID_DIRECTORY . $post["video_$i"];
+            };
+            $steps[$i] = [
+                'text' => $stepText,
+                'pictures' => $stepPics,
+                'videos' => $stepVids
+            ];
+        }
+
+        $drugs = [];
+        if (!empty($post['drugs'])) {
+            foreach ($post['drugs'] as $drug) {
+                $drugs[] = ['name' => $drug];
+            }
+        }
+
+        $payments = [];
+        if (!empty($post['paymentName'])) {
+            for ($i = 0; $i < count($post['paymentName']); $i++) {
+                $payments[] = [
+                    'name' => $post['paymentName'][$i],
+                    'cost' => $post['paymentCost'][$i],
+                    'number' => $post['paymentNumber'][$i]
+                ];
+            }
+        }
 
         try {
             $dbReader = new Reader();
@@ -81,7 +139,9 @@ class IllnessManager extends AdminController
             }
 
             $dbCreator = new Creator();
-            $illness = $dbCreator->createIllness($name, $class, $text);
+            $illness = $dbCreator->createFullIllness(
+                $name, $class, $description, $steps, $drugs, $payments
+            );
 
             $this->flash('success', "$name added successfully");
             return Router::redirect('/admin/illnesses');

@@ -9,16 +9,16 @@
 {% block content %}
 <div class="navibar">
   <span class='navi-text'>您选择的是，病例学习。</span>
-  <div class='back-text' onclick="window.history.back()">
+  <div role="button" class='back-text' onclick="window.history.back()">
     <span>返回上一页</span>
   </div>
 </div>
 <div class='select-bar'>
-  <span>请选择病例种类:</span>
+  <span >请选择病例种类:</span>
 </div>
 <div class='operations' id='3d-navi'>
   {% for class, ills in catalog %}
-  <div class='bingli' onclick="window.location.href = '/catalog/{{class}}?page=1'">
+  <div role="button" class='bingli' onclick="window.location.href = '/catalog/{{class}}?page=1'">
     <span>{{ class }}</span>
   </div>
   {% endfor %}

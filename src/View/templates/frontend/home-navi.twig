@@ -15,14 +15,14 @@
   <span>请选择你需要的功能:</span>
 </div>
 <div class='options-area'>
-  <div class='options' id='3d-navi' onclick="window.location.href ='/3d'">
+  <div role="button" class='options' id='3d-navi' onclick="window.location.href ='/3d'">
       <p>3D导览</p>
       <br />
       <div class="image-wrapper">
           <img src='/frontend/img/3d.png'>
       </div>
   </div>
-  <div class='options' id='character' onclick="window.location.href ='/catalog'">
+  <div role="button" class='options' id='character' onclick="window.location.href ='/catalog'">
       <p>职能学习</p>
       <br />
       <div class="image-wrapper">
@@ -30,7 +30,7 @@
       </div>
   </div>
   {% if admin() %}
-  <div class='options' id='history' onclick="window.location.href ='/admin'">
+  <div role="button" class='options' id='history' onclick="window.location.href ='/admin'">
       <p>病历管理</p>
       <br />
       <div class="image-wrapper">

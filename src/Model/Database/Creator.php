@@ -51,7 +51,6 @@ class Creator extends Connection
         string $description,
         array  $steps,
         array  $drugs,
-        //int    $stay,
         array  $payments
     ) {
         // Turn autocommit off

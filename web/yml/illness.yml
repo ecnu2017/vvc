@@ -1,0 +1,229 @@
+########################
+####### Class 3 ########
+########################
+
+####### 瘟热 ########
+-
+    name        : "瘟热"
+    class       : "Class 3"
+    description : "犬瘟热是由犬瘟热病毒引起的犬的一种高度接触性、致死性传染病。早期双相体温热型，症状类似感冒，随后以支气管炎、卡他性肺炎、胃肠炎为特征。病后期可见有神经症状出现如痉挛、抽搐。"
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :  step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "犬瘟热高免血清"
+            text    : "可以使机体增强足够的抗体，防止出现临床症状，达到治疗目的。"
+            picture : dogfever.jpg
+            cost    : 30
+    stay :
+        days        : 10
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 10
+
+####### 犬细小病毒病 ########
+-
+    name        : "犬细小病毒病"
+    class       : "Class 3"
+    description : "犬细小病毒病是犬的一种具有高度接触性传染的烈性传染病。临床上以急性出血性肠炎和心肌炎为特征。犬细小病毒对犬具有高度的接触性传染性，各种年龄的犬均可感染。"
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "庆大霉素"
+            text    : "消炎、止血、止吐"
+            picture : qdms.jpg
+            cost    : 30
+        -
+            name    : "地塞米松"
+            text    : "消炎、止血、止吐"
+            picture : sdms.jpg
+            cost    : 50
+    stay :
+        days        : 5
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : "Payment for stay"
+            cost    : 40
+            number  : 5
+
+####### 犬传染性肝炎 ########
+-
+    name        : "犬传染性肝炎"
+    class       : "Class 3"
+    description : "犬传染性肝炎是由犬腺病毒I型引起的犬的一种急性败血性传染病。临床上主要表现肝炎和角膜混浊(即蓝眼病)症状。"
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "传染性肝炎高免血清"
+            text    : "在发病初期可用传染性肝炎高免血清治疗有一定的作用。"
+            picture : gmxq.jpg
+            cost    : 30
+        -
+            name    : "利多卡因"
+            text    : "对患有角膜炎的犬可用0.5%利多卡因和氯霉素眼药水交替点眼。"
+            picture : ldky.jpg
+            cost    : 50
+    stay :
+        days        : 8
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 8
+
+####### 犬绦虫病 ########
+-
+    name        : "犬绦虫病"
+    class       : "Class 3"
+    description : "寄生于犬小肠内的绦虫种类很多，不仅成虫期对犬、猫的健康危害很大，而其幼虫期大多以其他家畜(或人)作为中间宿主，严重危害家畜和人体健康。"
+    steps :
+        1 :
+            text     : "Step 1 text"
+            pictures :
+                -
+                    step1.png
+            videos   : []
+        2 :
+            text     : "Step 2 text"
+            pictures :
+                -
+                    step2.png
+            videos   : []
+        3 :
+            text     : "Step 3 text"
+            pictures :
+                -
+                    step3.png
+            videos   : []
+        4 :
+            text     : "Step 4 text"
+            pictures :
+                -
+                    step4.png
+            videos   :
+                -
+                    "http://player.youku.com/embed/XNDM3NTQ5NTQ0"
+    drugs :
+        -
+            name    : "氢溴酸槟榔素"
+            text    : "治疗性驱虫"
+            picture : timg.jpg
+            cost    : 30
+        -
+            name    : "盐酸丁萘脒"
+            text    : "治疗性驱虫"
+            picture : dnm.jpg
+            cost    : 50
+    stay :
+        days        : 3
+    payments :
+        -
+            name    : "Payment for drug 1"
+            cost    : 30
+            number  : 2
+        -
+            name    : "Payment for drug 2"
+            cost    : 50
+            number  : 1
+        -
+            name    : Payment for stay
+            cost    : 40
+            number  : 3

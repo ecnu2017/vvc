@@ -4,7 +4,7 @@
 <input id="picChooser" style="display:none" type="file" name="uploads[]" multiple>
 <div class="row">
     {% for page, pics in illPics %}
-    <div class="hidable" id="page{{page}}"
+    <div class="hidable picture-flex" id="page{{page}}"
     {% if page > 1 %}hidden{% endif %}>
         {% for pic in pics %}
         <div class="col-md-{{12 / picsPerRow}}">

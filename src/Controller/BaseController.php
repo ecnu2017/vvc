@@ -197,14 +197,24 @@ class BaseController
      * @param  int     limit
      * @return string
      */
-    public function short(string $full, $limit = 55) : string
-    {
-        if (strlen($full) >= $limit) {
-            return substr($full, 0, $limit-1) . "...";
-        } else {
-            return substr($full, 0, $limit);
-        }
-    }
+     public function short(string $full, $limit = 20) : string
+     {
+         preg_match(PATTERN_CHINESE, $full, $matches);
+
+         if (!empty($matches)) {
+             if (mb_strlen($full) >= $limit) {
+                 return mb_substr($full, 0, $limit-1) . "...";
+             } else {
+                 return mb_substr($full, 0, $limit);
+             }
+         } else {
+             if (strlen($full) >= $limit) {
+                 return substr($full, 0, $limit-1) . "...";
+             } else {
+                 return substr($full, 0, $limit);
+             }
+         }
+     }
 
     /**
      * Returns only the filename in the path

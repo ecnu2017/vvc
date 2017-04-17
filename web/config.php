@@ -17,7 +17,7 @@ const NO_DATABASE = false;
  *  1 - admin privileges on all pages
  *  2 - signed in user privileges on all pages
  */
-const ACCESS_RIGHTS = -1;
+const ACCESS_RIGHTS = 1;
 
 /**
  * Default user and admin login details
@@ -38,6 +38,9 @@ const YML_DIRECTORY   = '/yml/';
 const PIC_DIRECTORY  = '/uploads/img/';
 const DRUG_DIRECTORY = '/uploads/img/drugs/';   // drug pictures
 const VID_DIRECTORY  = '/uploads/vid/';
+
+// Chinese characters pattern for regular expression
+const PATTERN_CHINESE = "/[\p{Han}]/simu";
 
 // Debug global helper-shortcuts
 // print $obj

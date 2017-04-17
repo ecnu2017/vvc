@@ -3,13 +3,11 @@
 {% block title %}Add Illness{% endblock %}
 
 {% block scripts %}
-<script src="/js/file_select.js"></script>
+<script src="/js/file_multi_select.js"></script>
+<script src="/js/append.js"></script>
 {% endblock %}
 
 {% block content %}
-{# Dialogues #}
-{% include 'inc/dlg/select_pic.twig' %}
-
 <div class="container">
     <div class="well col-sm-6 col-sm-offset-3">
         <form method="post" action="/admin/illnesses/add-single" enctype="multipart/form-data">
@@ -27,9 +25,10 @@
                 <input id="name" type="text" class="form-control" name="class" placeholder="Illness Class" required>
             </div>
             <div class="form-group">
-                <label for="text">Text</label>
-                <input id="text" type="text" class="form-control" name="text" placeholder="Illness description" required>
+                <label for="description">Text</label>
+                <input id="description" type="text" class="form-control" name="description" placeholder="Illness description" required>
             </div>
+            {% include 'inc/add_illness_step.twig' %}
             <br>
             <br>
             <br>
